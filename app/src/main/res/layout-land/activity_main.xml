@@ -6,8 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="371dp"
+        android:layout_height="66dp"
+        android:text="Сложить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.608" />
+
     <TextView
-        android:id="@+id/secondTerm"
+        android:id="@+id/secondTermText"
         android:layout_width="181dp"
         android:layout_height="27dp"
         android:layout_gravity="center_vertical"
@@ -23,7 +34,7 @@
         app:layout_constraintVertical_bias="0.432" />
 
     <TextView
-        android:id="@+id/firstTerm"
+        android:id="@+id/firstTermText"
         android:layout_width="182dp"
         android:layout_height="27dp"
         android:layout_gravity="center_vertical"
@@ -38,7 +49,7 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/firstTerm"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -52,7 +63,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/secondTerm"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:ems="10"
