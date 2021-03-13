@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener oAddButton = v -> {
             if (!isNumber(firstTermEditText, secondTermEditText)) {
                 errorMessage.setVisibility(View.VISIBLE);
-                errorMessage.setText("Вы можете ввести только целые числа. Проверьте ваши значения в полях.");
                 return;
             }
             errorMessage.setVisibility(View.INVISIBLE);
@@ -66,13 +65,18 @@ public class MainActivity extends AppCompatActivity {
      */
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("err_text", errorMessage.getText().toString());
+        outState.putInt("err_msg_vis", errorMessage.getVisibility());
 
     }
 
+    /**
+     * Restores all values which writes in here
+     *
+     * @param savedInstanceState saved state
+     */
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        String err_text = savedInstanceState.getString("err_text");
-        errorMessage.setText(err_text);
+        int viewVisibility = savedInstanceState.getInt("err_msg_vis");
+        errorMessage.setVisibility(viewVisibility);
     }
 }

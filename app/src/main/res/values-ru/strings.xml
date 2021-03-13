@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Калькулятор</string>
+    <string name="err_text">Вы можете ввести только целые числа. Проверьте ваши значения в полях.</string>
+    <string name="addButton_text">Сложить</string>
+    <string name="first_term">Первое слагаемое:</string>
+    <string name="second_term">Второе слагаемое:</string>
+
 </resources>

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AdditionCalculator</string>
-    <string name="errorMessage">You can enter integer only. Checks your values in a fields.</string>
+    <string name="err_text">You can enter integer only. Check your values in these fields.</string>
+    <string name="addButton_text">Add numbers</string>
+    <string name="first_term">First term:</string>
+    <string name="second_term">Second term:</string>
+
 </resources>
