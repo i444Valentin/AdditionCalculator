@@ -4,5 +4,5 @@
     <string name="addButton_text">Add numbers</string>
     <string name="first_term">First term:</string>
     <string name="second_term">Second term:</string>
-
+    <string name="exception">Unfortunate, something went wrong. Text of Error:</string>
 </resources>

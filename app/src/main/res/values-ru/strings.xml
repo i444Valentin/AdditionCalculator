@@ -5,5 +5,6 @@
     <string name="addButton_text">Сложить</string>
     <string name="first_term">Первое слагаемое:</string>
     <string name="second_term">Второе слагаемое:</string>
+    <string name="exception">К сожалению, что-то пошло не так. Текст ошибки:</string>
 
 </resources>

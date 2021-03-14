@@ -91,4 +91,26 @@
         app:layout_constraintVertical_bias="0.636"
         tools:visibility="visible" />
 
+    <TextView
+        android:id="@+id/exceptionMessage"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:text="@string/exception"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <TextView
+        android:id="@+id/exceptionText"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exceptionMessage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

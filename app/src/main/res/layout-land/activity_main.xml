@@ -7,6 +7,29 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/exceptionText"
+        android:layout_width="369dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exceptionMessage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/exceptionMessage"
+        android:layout_width="369dp"
+        android:layout_height="31dp"
+        android:text="@string/exception"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <TextView
         android:id="@+id/errorMessage"
         android:layout_width="369dp"
         android:layout_height="33dp"
