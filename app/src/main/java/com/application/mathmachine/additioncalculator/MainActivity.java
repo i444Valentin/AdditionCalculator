@@ -29,30 +29,31 @@ public class MainActivity extends AppCompatActivity {
         exceptionMessage = findViewById(R.id.exceptionMessage);
         exceptionText = findViewById(R.id.exceptionText);
         addButton = (Button) findViewById(R.id.addButton);
-        try {
+
             View.OnClickListener oAddButton = v -> {
-                if (!isNumber(firstTermEditText, secondTermEditText)) {
-                    errorMessage.setVisibility(View.VISIBLE);
-                    return;
+                try {
+                    if (!isNumber(firstTermEditText, secondTermEditText)) {
+                        errorMessage.setVisibility(View.VISIBLE);
+                        return;
+                    }
+                    errorMessage.setVisibility(View.INVISIBLE);
+                    exceptionMessage.setVisibility(View.INVISIBLE);
+                    exceptionText.setVisibility(View.INVISIBLE);
+
+                    firstTerm = Integer.parseInt(firstTermEditText.getText().toString());
+                    secondTerm = Integer.parseInt(secondTermEditText.getText().toString());
+                    Intent intentSecond = new Intent(this, SecondActivity.class);
+                    intentSecond.putExtra("first_term", firstTerm);
+                    intentSecond.putExtra("second_term", secondTerm);
+                    startActivity(intentSecond);
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                    exceptionMessage.setVisibility(View.VISIBLE);
+                    exceptionText.setVisibility(View.VISIBLE);
+                    exceptionText.setText(exception.getMessage());
                 }
-                errorMessage.setVisibility(View.INVISIBLE);
-                firstTerm = Integer.parseInt(firstTermEditText.getText().toString());
-                secondTerm = Integer.parseInt(secondTermEditText.getText().toString());
-                Intent intentSecond = new Intent(this, SecondActivity.class);
-                intentSecond.putExtra("first_term", firstTerm);
-                intentSecond.putExtra("second_term", secondTerm);
-                startActivity(intentSecond);
-
             };
-
             addButton.setOnClickListener(oAddButton);
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            exceptionMessage.setVisibility(View.VISIBLE);
-            exceptionText.setVisibility(View.VISIBLE);
-            exceptionText.setText(exception.getMessage());
-        }
-
     }
 
     /**
